@@ -21,6 +21,33 @@ const Home = () => {
       name: "Momos",
     },
   ];
+
+  const menuData = [
+    {
+      id: 1,
+      img: "https://images.unsplash.com/photo-1516865131505-4dabf2efc692?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Zm9vZHN8ZW58MHx8MHx8fDA%3D",
+      name: "K2 Burger",
+      price: 14,
+    },
+    {
+      id: 2,
+      img: "https://images.unsplash.com/photo-1516865131505-4dabf2efc692?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Zm9vZHN8ZW58MHx8MHx8fDA%3D",
+      name: "K2 Burger",
+      price: 11,
+    },
+    {
+      id: 3,
+      img: "https://images.unsplash.com/photo-1516865131505-4dabf2efc692?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Zm9vZHN8ZW58MHx8MHx8fDA%3D",
+      name: "K2 Burger",
+      price: 21,
+    },
+    {
+      id: 3,
+      img: "https://images.unsplash.com/photo-1516865131505-4dabf2efc692?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Zm9vZHN8ZW58MHx8MHx8fDA%3D",
+      name: "K2 Burger",
+      price: 18,
+    },
+  ];
   return (
     <div>
       {/* Full-width image section */}
@@ -64,34 +91,36 @@ const Home = () => {
           ))}
         </div>
       </section>
-      <div className="container mx-auto p-4">
-      {/* Other sections */}
+      <section className="container mx-auto p-4">
+        {/* Other sections */}
 
-      {/* New Section with two cards in one row */}
-      <h2 className="text-2xl font-bold text-center mb-8">Our Products</h2>
-      <div className="flex flex-wrap justify-around">
-        {/* Card 1 */}
-        <div className="flex items-center bg-white rounded-lg shadow-lg p-4 m-4 w-full md:w-5/12">
-          <img className="w-32 h-32 object-cover rounded-lg" src="https://via.placeholder.com/150" alt="Product 1" />
-          <div className="ml-4">
-            <h3 className="text-xl font-bold">Product Name 1</h3>
-            <p className="text-gray-600">$19.99</p>
-            <p className="mt-2 text-gray-600">This is a brief description of the product.</p>
-            <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded">Order Now</button>
+        {/* New Section with two cards in one row */}
+        <h2 className="text-2xl font-bold text-center mb-8">Food Menu</h2>
+        <div className="flex flex-wrap justify-around">
+          {/* Card 1 */}
+         {
+          menuData.map((item)=>(
+            <div key={item.id} className="flex items-center bg-white rounded-lg shadow-lg p-4 m-4 w-full md:w-5/12">
+            <img
+              className="w-32 h-32 object-cover rounded-lg"
+              src={item.img}
+              alt="Product 1"
+            />
+            <div className="ml-4">
+              <h3 className="text-xl font-bold">{item.name}</h3>
+              <p className="text-gray-600">{item.price}$</p>
+              <p className="mt-2 text-gray-600">
+                This is a brief description of the product.
+              </p>
+              <button className="bg-gradient-to-tl   font-semibold from-pink-500 to-pink-700 text-white px-4 py-2  rounded-md">
+                Order Now
+              </button>{" "}
+            </div>
           </div>
+          ))
+         }
         </div>
-        {/* Card 2 */}
-        <div className="flex items-center bg-white rounded-lg shadow-lg p-4 m-4 w-full md:w-5/12">
-          <img className="w-32 h-32 object-cover rounded-lg" src="https://via.placeholder.com/150" alt="Product 2" />
-          <div className="ml-4">
-            <h3 className="text-xl font-bold">Product Name 2</h3>
-            <p className="text-gray-600">$29.99</p>
-            <p className="mt-2 text-gray-600">This is a brief description of the product.</p>
-            <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded">Order Now</button>
-          </div>
-        </div>
-      </div>
-    </div>
+      </section>
     </div>
   );
 };
