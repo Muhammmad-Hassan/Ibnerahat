@@ -1,25 +1,38 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact'
-import Foods from './pages/Foods';
+import React from "react";
+import Hero from "./screens/Hero/Hero";
+import Navbar from "./components/Navbar/Navbar";
+import Services from "./screens/Services/Services.jsx";
+import Banner from "./screens/Banner/Banner.jsx";
+import AppStore from "./screens/AppStore/AppStore.jsx";
+import CoverBanner from "./screens/CoverBanner/CoverBanner.jsx";
+import Testimonial from "./screens/Testimonial/Testimonial.jsx";
+import Footer from "./components/Footer/Footer.jsx";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-function App() {
+const App = () => {
+  React.useEffect(() => {
+    AOS.init({
+      offset: 100,
+      duration: 500,
+      easing: "ease-in-sine",
+      delay: 100,
+    });
+    AOS.refresh();
+  }, []);
+
   return (
-    <Router>
-      <div>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact/>} />
-          <Route path="/foods" element={<Foods/>} />
-        </Routes>
-      </div>
-    </Router>
+    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
+      <Navbar />
+      <Hero />
+      <Services />
+      <Banner />
+      {/* <CoverBanner /> */}
+      <AppStore />
+      <Testimonial />
+      <Footer />
+    </div>
   );
-}
+};
 
 export default App;
