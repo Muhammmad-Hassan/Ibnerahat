@@ -1,31 +1,30 @@
 import React from "react";
-import Img from "../../assets/biryani.png";
-import Img2 from "../../assets/biryani2.png";
-import Img3 from "../../assets/biryani4.png";
+import chowmein from "../../assets/chowmein.png";
+import Img4 from "../../assets/biryani4.png";
 import StarRatings from "react-star-ratings";
 import { GiHamburger } from "react-icons/gi";
 
 const ServicesData = [
   {
     id: 1,
-    img: Img2,
+    img: Img4,
     name: "Rice",
     description:
-      "Lorem ipsum dolor sit amet ipsum dolor sit ametipsum dolor sit amet ipsum dolor sit amet.",
+      "Perfectly seasoned rice, a delightful and versatile side dish option.",
   },
   {
     id: 2,
-    img: Img2,
+    img: chowmein,
     name: "Chowmein",
     description:
-      "Lorem ipsum dolor sit amet ipsum dolor sit ametipsum dolor sit amet ipsum dolor sit amet",
+      "Tender noodles stir-fried with fresh vegetables in a savory sauce",
   },
   {
     id: 3,
-    img: Img2,
+    img: Img4,
     name: "Zinger Burger",
     description:
-      "Lorem ipsum dolor sit amet ipsum dolor sit ametipsum dolor sit amet ipsum dolor sit amet",
+      "Crispy and juicy, our Zinger Burger packs a flavorful punch",
   },
 ];
 const Services = () => {
@@ -40,8 +39,7 @@ const Services = () => {
             </p>
             <h1 className="text-3xl font-bold">Services</h1>
             <p className="text-xs text-gray-400">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Perspiciatis delectus architecto error nesciunt,
+            Explore our menu featuring crispy Zinger Burgers, savory Chowmein, and flavorful Rice dishes
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-14 md:gap-5 place-items-center">

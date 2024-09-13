@@ -1,7 +1,7 @@
 import React from "react";
 import BiryaniImg1 from "../../assets/biryani3.png";
 import BiryaniImg2 from "../../assets/biryani5.png";
-import BiryaniImg3 from "../../assets/biryani2.png";
+import Chowmein from "../../assets/chowmein.png";
 import Vector from "../../assets/vector3.png";
 
 const ImageList = [
@@ -15,7 +15,7 @@ const ImageList = [
   },
   {
     id: 3,
-    img: BiryaniImg3,
+    img: Chowmein,
   },
 ];
 
@@ -52,16 +52,14 @@ const Hero = () => {
               className="flex flex-col  justify-center gap-4 pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1"
             >
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold">
-                Welcome{" "}
+                Welcome to{" "}
                 <span className="bg-clip-text text-transparent bg-gradient-to-b from-primary to-secondary">
                   Ibn E Rahat
                 </span>{" "}
                 Cafe
               </h1>
-              <p className="text-sm ">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque
-                reiciendis inventore iste ratione ex alias quis magni at optio
-              </p>
+              <p className="text-sm mx-3">
+              Enjoy our tasty Chowmein, crispy Zinger Burgers, flavorful Rice, and irresistible Zinger Pieces. At Ibn e Rahat Cafe, every dish is made with care to please your taste buds. Come and taste the flavors that make each meal special!              </p>
               <div>
                
                 <button onClick={handlePhoneClick} className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full">
@@ -79,7 +77,7 @@ const Hero = () => {
                   data-aos-once="true"
                   src={imageId}
                   alt="biryani img"
-                  className="w-[300px] sm:w-[450px] sm:scale-125  mx-auto spin "
+                  className="w-[250px] sm:w-[350px] sm:scale-125  mx-auto spin "
                 />
               </div>
               <div className="flex lg:flex-col lg:top-1/2 lg:-translate-y-1/2 lg:py-2 justify-center gap-4 absolute bottom-[0px] lg:-right-10 bg-gray-300  rounded-full">
@@ -96,7 +94,7 @@ const Hero = () => {
                           ? BiryaniImg1
                           : item.id === 2
                           ? BiryaniImg2
-                          : BiryaniImg3
+                          : Chowmein
                       );
                     }}
                     alt="biryani img"

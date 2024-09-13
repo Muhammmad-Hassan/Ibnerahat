@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import {
-  FaFacebook,
-  FaInstagram,
-  FaLinkedin,
   FaLocationArrow,
   FaMobileAlt,
+  FaTiktok
 } from "react-icons/fa";
+
 import footerLogo from "../../assets/food-logo.png";
 
 const Footer = () => {
@@ -19,8 +18,7 @@ const Footer = () => {
               IBN E RAHAT
             </h1>
             <p className="">
-              Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Possimus, voluptate.{" "}
+            Ibn e Rahat Cafe offers expertly crafted Zinger Burgers, Chowmein, and Rice in a cozy, welcoming atmosphere.{" "}
             </p>
             <br />
             <div className="flex items-center gap-3">
@@ -33,14 +31,13 @@ const Footer = () => {
             </div>
             {/* Social Handle */}
             <div className="flex items-center gap-3 mt-6">
+              
               <a href="#">
-                <FaInstagram className="text-3xl" />
+                {/* <FaFacebook className="text-3xl" /> */}
               </a>
               <a href="#">
-                <FaFacebook className="text-3xl" />
-              </a>
-              <a href="#">
-                <FaLinkedin className="text-3xl" />
+
+                <FaTiktok className="text-3xl" />
               </a>
             </div>
           </div>

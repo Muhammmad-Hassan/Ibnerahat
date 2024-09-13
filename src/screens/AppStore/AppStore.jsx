@@ -15,23 +15,11 @@ const AppStore = () => {
               className="space-y-6 max-w-xl mx-auto"
             >
               <h1 className="text-2xl text-center sm:text-left sm:text-4xl font-semibold text-gray-700 dark:text-gray-400">
-                Foodly is available for Android and IOS
+              Fast delivery of Zinger Burgers, Chowmein, and Rice
               </h1>
               <div className="flex flex-wrap justify-center sm:justify-start items-center">
-                <a href="#">
-                  <img
-                    src={PlayStoreImg}
-                    alt="Play store"
-                    className="max-w-[150px] sm:max-w-[120px] md:max-w-[200px]"
-                  />
-                </a>
-                <a href="#">
-                  <img
-                    src={AppStoreImg}
-                    alt="App store"
-                    className="max-w-[150px] sm:max-w-[120px] md:max-w-[200px]"
-                  />
-                </a>
+               
+               
               </div>
             </div>
             <div data-aos="zoom-in" data-aos-duration="300">
