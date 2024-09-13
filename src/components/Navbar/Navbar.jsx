@@ -21,7 +21,7 @@ const Menu = [
   },
 ];
 const handlePhoneClick = () => {
-  window.location.href = "tel:+923132402444";
+  window.location.href = "tel:+923262626480";
 };
 const Navbar = () => {
   return (
