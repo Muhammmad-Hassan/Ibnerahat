@@ -1,8 +1,7 @@
 import React from "react";
 import chowmein from "../../assets/chowmein.png";
 import Img4 from "../../assets/biryani4.png";
-import StarRatings from "react-star-ratings";
-import { GiHamburger } from "react-icons/gi";
+import { motion } from "framer-motion"; // Importing Framer Motion
 
 const ServicesData = [
   {
@@ -23,10 +22,10 @@ const ServicesData = [
     id: 3,
     img: Img4,
     name: "Zinger Burger",
-    description:
-      "Crispy and juicy, our Zinger Burger packs a flavorful punch",
+    description: "Crispy and juicy, our Zinger Burger packs a flavorful punch",
   },
 ];
+
 const Services = () => {
   return (
     <>
@@ -39,45 +38,35 @@ const Services = () => {
             </p>
             <h1 className="text-3xl font-bold">Services</h1>
             <p className="text-xs text-gray-400">
-            Explore our menu featuring crispy Zinger Burgers, savory Chowmein, and flavorful Rice dishes
+              Explore our menu featuring crispy Zinger Burgers, savory Chowmein,
+              and flavorful Rice dishes
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-14 md:gap-5 place-items-center">
             {ServicesData.map((service) => (
-              <div
-              key={service.id}
-                data-aos="zoom-in"
-                data-aos-duration="300"
+              
+               <motion.div
+                key={service.id}
+                initial={{ opacity: 0 }} // Slide up effect from below
+                whileInView={{ opacity: 1 }} // Animate in when in view
+                transition={{delay: 0.2,duration:0.6}}
                 className="rounded-2xl bg-white dark:bg-gray-800 hover:bg-primary dark:hover:bg-primary hover:text-white relative shadow-xl duration-high group max-w-[300px]"
               >
-                <div className="h-[100px]">
-                  <img
+                <motion.div className="h-[100px]">
+                  <motion.img
                     src={service.img}
-                    alt=""
-                    className="max-w-[200px] block mx-auto transform -translate-y-14
-                  group-hover:scale-105 group-hover:rotate-6 duration-300"
+                    alt={service.name}
+                    className="max-w-[200px] block mx-auto transform -translate-y-14 group-hover:scale-105 duration-300"
+                   
                   />
-                </div>
+                </motion.div>
                 <div className="p-4 text-center">
-                  <div className="w-full ">
-                    {/* <StarRatings
-                      rating={4}
-                      starRatedColor="yellow"
-                      isSelectable={false}
-                      starHoverColor="yellow"
-                      // starSelectingHoverColor
-                      starDimension="20px"
-                      changeRating={() => {}}
-                      numberOfStars={5}
-                      name="rating"
-                    /> */}
-                  </div>
                   <h1 className="text-xl font-bold">{service.name}</h1>
                   <p className="text-gray-500 group-hover:text-white duration-high text-sm line-clamp-2">
                     {service.description}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

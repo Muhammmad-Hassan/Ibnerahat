@@ -4,6 +4,7 @@ import Vector from "../../assets/vector3.png";
 import { GrSecure } from "react-icons/gr";
 import { IoFastFood } from "react-icons/io5";
 import { GiFoodTruck } from "react-icons/gi";
+import {motion} from "framer-motion"
 
 const Banner = () => {
   const bgImage = {
@@ -18,9 +19,10 @@ const Banner = () => {
     <>
       <div className="min-h-[550px]">
         <div className="min-h-[550px] flex justify-center items-center backdrop-blur-xl py-12 sm:py-0 ">
-          <div
-            data-aos="slide-up"
-            data-aos-duration="300"
+          <motion.div
+           initial={{y : 300 }}
+           whileInView={{y:0}}
+           transition={{duration: 0.4}}
             className="container"
           >
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -61,7 +63,7 @@ const Banner = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </>
